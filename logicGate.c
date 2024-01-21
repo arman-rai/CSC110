@@ -25,7 +25,7 @@ int main() {
         result2[c] = x[c] & ~z[c];
         result3[c] = x[c] & y[c] & ~z[c];
          printf("%d\t%d\t%d\t", x[c], y[c], z[c]);
-        printf("%d\t%d\t%d\t%d\n", result[c], result1[c], result2[c], result3[c] >
+        printf("%d\t%d\t%d\t%d\n", result[c], result1[c], result2[c], result3[c]);
     }
 
     return 0;
