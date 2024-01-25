@@ -1,17 +1,19 @@
 #include <stdio.h>
+#include <math.h>
 
 int main() {
     
-    int num, c, i = 1;
+    int num, c, sq, i = 1;
 
     printf("Enter a number till which you want to print the factor(s): ");
     scanf("%d", &num);
     
-    c = num; 
+    sq = sqrt(num); 
 
-    while (i <= c) {
-        if (c % i == 0) {
-            printf("%d ", i);
+    while (i <= sq) {
+        c = num % i;
+        if (c == 0) {
+            printf("%d\t%d\t", i, num/i);
         }
         i++;
     }
