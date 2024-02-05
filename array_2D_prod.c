@@ -37,7 +37,7 @@ printf("Matrix2:\n");
 	for (i = 0; i < 3; i++) {
 			
 			for (j = 0; j<3; j++) {
-				printf("for row, col: %d*%d",i, j);
+				printf("for row, col: %d*%d\t",i, j);
 				printf("prod: \t%d\n", prod[i][j]);	
 			}
 		}
