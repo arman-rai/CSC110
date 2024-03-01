@@ -1,32 +1,44 @@
-#include <stdbool.h>
 #include <stdio.h>
+#include <stdbool.h>
 
-int main() {
+int main () {
 
-    bool x[8], y[8] = {0, 0, 0, 0, 1, 1, 1, 1}, z[8];
-    bool result[8], result1[8], result2[8], result3[8];
-    int i, c;
+	bool x[8], y[8], z[8], result[8];
+	int i, j, k, c;
+	for (i=0; i< 8; i++) {
+		if (i % 2 == 0) { 
+			x[i] = 0;
+		}
+		else {
+			x[i] =1;
+		}
+	}
+	for (j=0; j<8; j++) {
+		if (j = 0, j< 4,j++) {
+			y[j] = 0;
+		}
+		else {
+			y[j] =1;
+		}
+	}
+	for (k=0; k<8; k++) {
+		if (i % 4 < 2) {
+			z[k] = 0;
+		}
+		else {
+			z[k] = 1;
+		}
+	}
 
-    // Initialize x array
-    for (i = 0; i < 8; i++) {
-        x[i] = (i % 2 == 0) ? 0 : 1;
-    }
+		
 
-    // Initialize z array
-    for (i = 0; i < 8; i++) {
-        z[i] = (i % 4 < 2) ? 0 : 1;
-    }
+// finding out the x.y.z, x.y|.z, x.z|, x.y.z|
+printf("X\tY\tZ\tX.Y.Z\n");
+	for ( c=0; c< 8; c++) {
+		result[c] = x[c] & y[c] & z[c];
+		printf("%d\t%d\t%d\t%d\n", x[c], y[c], z[c], result[c]);
+		
+	}
 
-    // Finding out the x.y.z, x.y|.z, x.z|, x.y.z|
-    printf("X\tY\tZ\tX.Y.Z\tX.Y|.Z\tX.Z|\tX.Y.Z|\n");
-    for (c = 0; c < 8; c++) {
-        result[c] = x[c] & y[c] & z[c];
-        result1[c] = x[c] & ~y[c] & z[c];
-        result2[c] = x[c] & ~z[c];
-        result3[c] = x[c] & y[c] & ~z[c];
-         printf("%d\t%d\t%d\t", x[c], y[c], z[c]);
-        printf("%d\t%d\t%d\t%d\n", result[c], result1[c], result2[c], result3[c]);
-    }
-
-    return 0;
+return 0;
 }

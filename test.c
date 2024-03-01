@@ -1,22 +1,14 @@
-Calculator.c
-Cube.c
-Distance.c
-README.md
-Sphere.c
-Swap.c
-Temp_Conv.c
-digits.c
-even2212.c
-factorial.c
-goto12n.c
-gpa.c
-logicGate.c
-m2cm.c
-negpos.c
-reverse.c
-smallest.c
-sum2n.c
-switchnegpos.c
-teenager.c
-vote.c
-whilesum2n.c
+
+#include <stdio.h>
+
+int main(void)
+{
+	int m2[][3] = {{3, 5, 6}, {4, 6, 2}};
+	int *p1;
+	p1 = &m2[0][0];
+	while (p1 < &m2[0][0] +6){
+		printf("%d\n",*p1);	
+		p1++;
+	}
+
+}

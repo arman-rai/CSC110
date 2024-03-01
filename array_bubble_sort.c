@@ -1,6 +1,6 @@
 
 #include <stdio.h>
-
+void main (void){
 int a[] = { 3, 5, 75, 6, 23};
 int sz = sizeof(a) / sizeof(int);
 int i, temp;
@@ -14,3 +14,4 @@ for (i = 0; i< sz/2; i++) {
 
 for (i = 0; i<sz; i++) 
 	printf("%d\n", a[i]);
+}

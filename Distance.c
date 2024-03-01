@@ -2,13 +2,13 @@
 
 int main() {
 
-	float v, t, a, s;
+	int v, t, a, s;
 
 	printf("Enter the velocity, time and acceleration in SI units:\n");
-	scanf("%f %f %f", &v, &t, &a);
+	scanf("%d %d %d", &v, &t, &a);
 	
 	s = v*t + .5 *a *t*t;
-	printf("The distance covered: %f", s); 
+	printf("The distance covered: %d", s); 
 	
 	return 0;
 
