@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+    struct Point {
+        int x;
+        int y;
+    }p1;
+
+
+    struct Point *ptr = &p1;
+    
+    ptr ->x = 3;
+    ptr ->y = 4;
+
+    printf("%d",ptr->x);
+return 0;
+}
